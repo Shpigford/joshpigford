@@ -24,8 +24,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className="dark:bg-black dark:text-white py-20 px-20">
-        <div className="flex items-start gap-4">
+      <body className="dark:bg-black dark:text-white p-8 md:py-20">
+        <div className="md:flex items-start gap-4">
           <Link href="/"
             className="text-gold-500 text-6xl font-semibold hover:text-gold-400">
             {getRandomSymbol()}
