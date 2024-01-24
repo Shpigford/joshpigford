@@ -30,7 +30,9 @@ export default async function Page() {
         <tbody>
           {projects?.map((project) => (
             <tr key={project.id} className="">
-              <td className="px-2 py-3">{project.name}</td>
+              <td className="px-2 py-3">
+                {project.link ? <a href={project.link}>{project.name}</a> : project.name}
+              </td>
               <td>{project.year}</td>
               <td>{project.description}</td>
               <td>{project.outcome}</td>
