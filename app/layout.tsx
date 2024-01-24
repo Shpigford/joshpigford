@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from 'next/link'
 import "./globals.css";
 
-const symbols = ['⦂⦂', '⦿', '⊛', '⊚', '⊙', '⦚', '⟁', '⦂⦚'];
+//const symbols = ['⦂⦂', '⦿', '⊛', '⊚', '⊙', '⦚', '⟁', '⦂⦚'];
+const symbols = ['⦂⦚'];
 
 function getRandomSymbol() {
   const randomIndex = Math.floor(Math.random() * symbols.length);
