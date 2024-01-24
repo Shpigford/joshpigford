@@ -2,16 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.prose a,
 .thick-link {
   text-decoration: none;
   background-image: linear-gradient(90deg, #ffd100 0%, #ffd100 100%);
   background-repeat: no-repeat;
   background-size: 100% 0.1em;
   background-position: 0 88%;
-  transition: background-size 0.25s ease-in-out;
-  &:hover {
-    background-size: 100% 0.2em;
-  }
+  transition: background-size 0.2s ease-in-out;
+}
+
+.prose a:hover {
+  background-size: 100% 0.2em;
 }
 
 @font-face {
