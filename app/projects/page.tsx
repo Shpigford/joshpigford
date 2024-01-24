@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { createClient } from '@/utils/supabase/server';
 import { cookies } from 'next/headers';
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -31,7 +32,7 @@ export default async function Page() {
           {projects?.map((project) => (
             <tr key={project.id} className="">
               <td className="px-2 py-3">
-                {project.link ? <a href={project.link}>{project.name}</a> : project.name}
+                <Link href={`/projects/${project.slug}`}>{project.name}</Link>
               </td>
               <td>{project.year}</td>
               <td>{project.description}</td>
