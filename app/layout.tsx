@@ -60,6 +60,11 @@ export default function RootLayout({
               </p>
             </header>
             <div>{children}</div>
+            <footer className="prose dark:prose-invert font-serif my-12 text-sm text-gray-400">
+              <p>
+                This thing is <a href="https://github.com/Shpigford/joshpigford">open source</a>, for better or worse.
+              </p>
+            </footer>
           </div>
         </div>
       </body>
