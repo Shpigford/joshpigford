@@ -1,14 +1,7 @@
 import type { Metadata } from "next";
 import Link from 'next/link'
 import "./globals.css";
-
-//const symbols = ['⦂⦂', '⦿', '⊛', '⊚', '⊙', '⦚', '⟁', '⦂⦚'];
-const symbols = ['⦂⦚'];
-
-function getRandomSymbol() {
-  const randomIndex = Math.floor(Math.random() * symbols.length);
-  return symbols[randomIndex];
-}
+import { RandomSymbol } from "@/app/RandomSymbol";
 
 export const metadata: Metadata = {
   title: {
@@ -27,8 +20,8 @@ export default function RootLayout({
       <body className="dark:bg-black dark:text-white p-8 md:py-20">
         <div className="md:flex items-start gap-4">
           <Link href="/"
-            className="text-gold-500 text-6xl font-semibold hover:text-gold-400">
-            {getRandomSymbol()}
+            className="text-gold-500 text-6xl font-semibold hover:text-gold-400 w-14 text-right">
+            <RandomSymbol />
           </Link>
           <div>
             <header className="prose dark:prose-invert font-serif mb-10">
