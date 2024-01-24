@@ -1,3 +1,9 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Investments',
+}
+
 export default function Page() {
   return (
     <div className="prose dark:prose-invert font-serif">

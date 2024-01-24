@@ -10,8 +10,10 @@ function getRandomSymbol() {
 }
 
 export const metadata: Metadata = {
-  title: "Josh Pigford",
-  description: "Dabbler",
+  title: {
+    default: "Josh Pigford",
+    template: "%s - Josh Pigford"
+  }
 };
 
 export default function RootLayout({
