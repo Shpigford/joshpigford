@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from 'next/link'
 import "./globals.css";
-import { RandomSymbol } from "@/app/RandomSymbol";
+import { RandomSymbol } from "@/app/lib/RandomSymbol";
 
 export const metadata: Metadata = {
   title: {
