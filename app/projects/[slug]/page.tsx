@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import { createClient } from '@/utils/supabase/server';
 import { cookies } from 'next/headers';
 import Link from 'next/link'
-import { cache } from 'react'
 
 type Props = {
   params: { slug: string }
