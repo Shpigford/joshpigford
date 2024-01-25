@@ -8,18 +8,13 @@ type Props = {
   params: { slug: string }
 }
 
-export const getProject = cache(async (slug: string) => {
-  const cookieStore = cookies()
-  const supabase = createClient(cookieStore);
-  const project = await supabase.from("projects").select().eq('slug', slug).single();
-  return project
-})
-
 export async function generateMetadata(
   { params }: Props
 ): Promise<Metadata> {
   const slug = params.slug;
-  const { data: project } = await getProject(slug)
+  const cookieStore = cookies()
+  const supabase = createClient(cookieStore);
+  const { data: project } = await supabase.from("projects").select().eq('slug', slug).single();
 
   return {
     title: project.name,
@@ -28,7 +23,9 @@ export async function generateMetadata(
 
 export default async function Page({ params }: Props) {
   const slug = params.slug;
-  const { data: project } = await getProject(slug)
+  const cookieStore = cookies()
+  const supabase = createClient(cookieStore);
+  const { data: project } = await supabase.from("projects").select().eq('slug', slug).single();
 
   return (
     <div className="prose dark:prose-invert font-serif max-w-full w-full">
