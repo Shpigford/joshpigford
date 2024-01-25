@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from 'next/link'
-import "./globals.css";
+import "@/app/globals.css";
 import { RandomSymbol } from "@/app/lib/RandomSymbol";
 import { Analytics } from '@vercel/analytics/react';
 
