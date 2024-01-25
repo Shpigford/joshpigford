@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from 'next/link'
 import "./globals.css";
 import { RandomSymbol } from "@/app/lib/RandomSymbol";
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: {
@@ -60,6 +61,7 @@ export default function RootLayout({
             </footer>
           </div>
         </div>
+        <Analytics />
       </body>
     </html>
   );
