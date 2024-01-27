@@ -15,7 +15,6 @@ export default async function MissionControlPage() {
   return (
     <div>
       <p>Hello {data.user.email}</p>
-      <button onClick={() => supabase.auth.signOut()}>Sign Out</button>
     </div>
   )
 }
