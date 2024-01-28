@@ -24,7 +24,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" className="dark">
-      <body className="dark:bg-black dark:text-white p-8 md:py-20">
+      <body className="dark:bg-black dark:text-white p-8 md:py-20 font-serif">
         <div className="md:flex items-start gap-4">
           <Link href="/"
             className="text-gold-500 text-6xl font-semibold hover:text-gold-400 w-14 text-right">
@@ -38,7 +38,7 @@ export default async function RootLayout({
               {user && user.data && user.data.user !== null && (
                 <p className="text-xl">
                   <Link
-                    href="/articles"
+                    href="/mission-control/articles"
                     className="thick-link"
                   >Articles</Link> / <Link
                     href="/projects"
